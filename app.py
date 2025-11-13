@@ -62,3 +62,46 @@ def decorator_function(original_function):
 def display_info(name, age):
      print(f"Name: {name}, Age: {age}")
 display_info("Alice", 30)
+
+class Student:
+     school = "Moringa School"
+     def __init__(self, name, age, grade, cohort, email=None):
+          self.name = name
+          self.age = age
+          self.grade = grade # 0-100
+          self.cohort = cohort
+          self.email = email
+          pass
+     def greet(self):
+          print(f"Hello, my name is {self.name} and I am {self.age} years old and from {self.cohort}.")
+
+     def display_student_info(self):
+          print(f"Student Name: {self.name}, Age: {self.age}, Grade: {self.grade}")
+        
+          if self.grade >= 90:
+                 print("Grade: A")
+          elif self.grade >= 80:
+                    print("Grade: B")   
+          elif self.grade >= 70:
+                    print("Grade: C")
+          elif self.grade >= 60:
+                    print("Grade: D")
+          else:
+                    print("Grade: F")
+student1 = Student("John", 20, 85, "August 2025")
+student1.display_student_info()  
+# student2 = Student("Jane", 22, 92)
+# student2.display_student_info()
+# student3 = Student("Mike", 19, 76)
+# student3.display_student_info()
+# student4 = Student("Emily", 21, 58)
+# student4.display_student_info() 
+# kelvin = Student("Kelvin", 22, 100)
+# print(type(kelvin))
+# print(type(Student))
+kelvin = Student("Kelvin", 22, 100, "August 2025")
+# kelvin.greet()
+kelvin.school = "University of central oklahoma"
+print(kelvin.school)
+                 
+    
